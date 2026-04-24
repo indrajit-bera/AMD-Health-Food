@@ -1,0 +1,102 @@
+You are an expert full-stack web developer and UI/UX designer. Build a complete, working website called "ANTIGRAVITY" — a smart food choice, diet analysis, and fitness tracker platform.
+
+---
+
+🎨 THEME & VISUAL IDENTITY:
+- Dark background: deep black (#050508) with subtle dark navy undertones
+- Superman color palette: electric red (#E8001C), royal blue (#0057B8), gold (#FFD700)
+- Glowing neon effects on all key UI elements (text-shadow, box-shadow with blur)
+- Animated particle field or starfield in the background (pure JS canvas — floating blue/red particles that drift slowly)
+- The "S" shield logo subtly watermarked in the hero section as a glowing SVG backdrop
+- Font: "Orbitron" or "Rajdhani" from Google Fonts for headings (futuristic, strong), "Exo 2" for body text
+- Glassmorphism cards: rgba(255,255,255,0.04) background, 1px solid rgba(255,255,255,0.08) border, backdrop-filter blur
+- All buttons have red glow on hover, pulsing animation
+- Section dividers use diagonal cuts (clip-path) for dynamic flow
+
+---
+
+🌟 ANIMATIONS (CSS + JS):
+- Hero text types itself in with a typewriter effect
+- Number counters animate up when sections scroll into view (Intersection Observer)
+- Cards fly in with staggered fade+translateY on scroll
+- Superman "S" shield rotates slowly in the background of the hero
+- Glowing ring spinner on loading state
+- Input fields light up with blue glow on focus
+- Progress bars animate smoothly with a shimmer sweep
+- Floating action elements with subtle levitation (CSS keyframe translateY loop)
+- Page transitions with a red horizontal wipe
+
+---
+
+📄 PAGES / SECTIONS (Single Page App, HTML + CSS + JS):
+
+1. HERO SECTION
+   - Full viewport, starfield canvas background
+   - Giant glowing headline: "RISE. EAT. CONQUER." with typewriter effect
+   - Subheadline: "AI-powered nutrition and fitness intelligence"
+   - CTA buttons: "Analyze My Diet" (red glow) + "Track Fitness" (blue outline)
+   - Animated S-shield watermark behind text
+
+2. DIET ANALYZER SECTION
+   - Clean form: Food Item input, Quantity (grams), Meal Type (Breakfast/Lunch/Dinner/Snack)
+   - "Analyze" button triggers a simulated result panel (JS logic)
+   - Result card shows: Calories, Protein, Carbs, Fat, Fiber with animated bar charts (CSS bars, colored red/blue/gold)
+   - Health score (0–100) shown as a glowing circular radial progress
+   - Emoji health verdict: 🟢 Excellent / 🟡 Good / 🔴 Needs Work
+   - Use a hardcoded JS food database (10–15 common foods) for instant results
+   - Unknown foods show estimated values with a disclaimer
+
+3. FITNESS TRACKER SECTION
+   - Input fields: Age, Weight (kg), Height (cm), Activity Level (dropdown: Sedentary/Moderate/Active/Athlete)
+   - Goal selector: Lose Weight / Maintain / Build Muscle
+   - Outputs: BMI with category badge, Daily Caloric Need (TDEE), Recommended Macros (P/C/F split as %)
+   - All outputs animate in as glowing stat cards
+   - BMI gauge: animated arc SVG that fills to the BMI value with color zones (green/yellow/red)
+
+4. MEAL PLANNER SECTION
+   - 3 columns: Breakfast / Lunch / Dinner
+   - Each column shows 2–3 example meal suggestions (hardcoded, goal-aware based on selected goal)
+   - Each meal card shows name, estimated calories, a small colored nutrient breakdown pill row
+   - Hover reveals an expand with ingredients list
+   - "Regenerate Plan" button reshuffles suggestions with a flip card animation
+
+5. PROGRESS DASHBOARD SECTION
+   - 4 animated stat boxes: "Calories Today", "Protein", "Water Intake", "Steps"
+   - Users can click +/- or type values to update each stat
+   - Donut chart (pure canvas JS) showing today's macro split
+   - Motivational quote rotates every 10 seconds with fade transition (5 hardcoded Superman-themed quotes)
+
+6. FOOTER
+   - Dark, minimal — "ANTIGRAVITY © 2025 — Fuel Like A Hero"
+   - Social icons with red glow hover
+   - Thin red line separator
+
+---
+
+⚙️ TECHNICAL REQUIREMENTS:
+- Single HTML file (index.html) with all CSS in <style> and all JS in <script> — no external frameworks except Google Fonts CDN
+- PHP file (analyze.php) — accepts POST with food name + quantity, returns JSON with mock nutrition values (use hardcoded array), include CORS headers
+- Fully responsive: mobile-first, hamburger nav on mobile
+- Smooth scroll navigation with active link highlighting
+- Sticky navbar that shrinks on scroll with a dark glass effect
+- All animations use CSS keyframes or vanilla JS — NO jQuery, NO React
+- LocalStorage saves the user's fitness data so it persists on refresh
+- All forms validate with red glow shake animation on error
+
+---
+
+🦸 SUPERMAN EASTER EGGS:
+- Clicking the logo plays a short "whoosh" sound (Web Audio API generated tone, no external files)
+- The cursor leaves a brief red trail on movement (canvas overlay)
+- A "Superman Mode" toggle button in the nav that, when activated, turns all glows to gold and makes the background pulse slowly — "UNLIMITED POWER" text flashes once
+
+---
+
+QUALITY STANDARD:
+- This must look like a $10,000 professional dark SaaS product
+- Every pixel intentional, every animation purposeful
+- No placeholder Lorem Ipsum — all content must be real and relevant
+- The site must WORK out of the box with zero external dependencies except Google Fonts
+- Code must be clean, commented, and organized
+
+Build index.html first (complete), then analyze.php (complete). Do not truncate. Do not use placeholders.
